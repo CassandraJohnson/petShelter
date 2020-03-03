@@ -1,0 +1,31 @@
+<h3>Detail about {{thispet.name}}</h3>
+<table>
+  <tr>
+    <th>Pet Type:</th>
+    <td>{{thispet.pettype}}</td>
+  </tr>
+  <tr>
+    <th>Description:</th>
+    <td>{{thispet.description}}</td>
+  </tr>
+  <tr>
+    <th>Skill#1:</th>
+    <td>{{thispet.skill1}} </td>
+  </tr>
+  <tr>
+    <th>Skill#2:</th>
+    <td>{{thispet.skill2}}</td>
+  </tr>
+  <tr>
+    <th>Skill#3:</th>
+    <td>{{thispet.skill3}} </td>
+  </tr>
+  <tr>
+    <th>Likes:</th>
+    <td>{{thispet.like_count}}</td>
+  </tr>
+  <tr>
+    <td><button *ngIf="thispet.seeLike" (click)="onLike(thispet)">Like</button> </td>
+    <td><button (click)="onDelete(thispet._id)">Adopt</button> </td>
+  </tr>
+</table>

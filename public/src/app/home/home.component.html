@@ -1,0 +1,15 @@
+<fieldset>
+  <table>
+    <tr>
+      <th>Pet Name</th>
+      <th>Type</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let a of pets">
+      <td>{{a.name}}</td>
+      <td>{{a.pettype}}</td>
+      <td><button [routerLink]="['/edit/', a._id]">Edit</button> - <button (click)="onDelete(a._id)">Adopt</button> -
+        <button [routerLink]="['/detail/', a._id]">Details</button></td>
+    </tr>
+  </table>
+</fieldset>

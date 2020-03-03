@@ -1,0 +1,39 @@
+<h2>Edit a Pet</h2>
+
+<p id="error" style="background: red; color:white;">{{message}}</p>
+
+<div id="newform">
+  <form (submit)="onEdit(thispet)">
+    <table>
+      <tr>
+        <th>Pet name:</th>
+        <td><input type="text" name="thispet.name" [(ngModel)]="thispet.name" /></td>
+      </tr>
+      <tr>
+        <th>Pet type:</th>
+        <td><input type="text" name="thispet.pettype" [(ngModel)]="thispet.pettype" /></td>
+      </tr>
+      <tr>
+        <th>Description:</th>
+        <td><input type="text" name="thispet.description" [(ngModel)]="thispet.description" /></td>
+      </tr>
+      <h3>Add skills(optional)</h3>
+      <tr>
+        <th>Skill#1:</th>
+        <td><input type="text" name="thispet.skill1" [(ngModel)]="thispet.skill1" /></td>
+      </tr>
+      <tr>
+        <th>Skill#2:</th>
+        <td><input type="text" name="thispet.skill2" [(ngModel)]="thispet.skill2" /></td>
+      </tr>
+      <tr>
+        <th>Skill#3:</th>
+        <td><input type="text" name="thispet.skill3" [(ngModel)]="thispet.skill3" /></td>
+      </tr>
+      <tr>
+        <td><button [routerLink]="['']">Cancel</button> </td>
+        <td><input type="submit" value="Edit This Pet" /></td>
+      </tr>
+    </table>
+  </form>
+</div>

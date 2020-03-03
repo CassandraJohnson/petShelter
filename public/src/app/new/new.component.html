@@ -1,0 +1,39 @@
+<h2>Pet Shelter</h2>
+<h3>Please add a pet that needs a home</h3>
+<p id="error" style="background: rgb(10, 61, 8);color:white;">{{message}}</p>
+
+<div id="nform">
+  <form (submit)="onSubmit()">
+    <table>
+      <tr>
+        <th>Pet's name:</th>
+        <td><input type="text" name="newPet.name" [(ngModel)]="newPet.name" /></td>
+      </tr>
+      <tr>
+        <th>Pet's type:</th>
+        <td><input type="text" name="newPet.pettype" [(ngModel)]="newPet.pettype" /></td>
+      </tr>
+      <tr>
+        <th>Description:</th>
+        <td><input type="text" name="newPet.description" [(ngModel)]="newPet.description" /></td>
+      </tr>
+      <tr>
+        <th>Add skill #1:</th>
+        <td><input type="text" name="newPet.skill1" [(ngModel)]="newPet.skill1" /></td>
+      </tr>
+      <tr>
+        <th>Add skill #2:</th>
+        <td><input type="text" name="newPet.skill2" [(ngModel)]="newPet.skill2" /></td>
+      </tr>
+      <tr>
+        <th>Add skill #3:</th>
+        <td><input type="text" name="newPet.skill3" [(ngModel)]="newPet.skill3" /></td>
+      </tr>
+
+      <tr>
+        <td><button [routerLink]="['']">Cancel</button> </td>
+        <td><input type="submit" value="Add New Pet" /></td>
+      </tr>
+    </table>
+  </form>
+</div>
